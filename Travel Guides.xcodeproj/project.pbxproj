@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		0877DAAD278F42AC008586D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DAAC278F42AC008586D5 /* AppDelegate.swift */; };
 		0877DAAF278F42AC008586D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DAAE278F42AC008586D5 /* SceneDelegate.swift */; };
-		0877DAB1278F42AC008586D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DAB0278F42AC008586D5 /* ViewController.swift */; };
 		0877DAB4278F42AC008586D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0877DAB2278F42AC008586D5 /* Main.storyboard */; };
 		0877DAB6278F42AE008586D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0877DAB5278F42AE008586D5 /* Assets.xcassets */; };
 		0877DAB9278F42AE008586D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0877DAB7278F42AE008586D5 /* LaunchScreen.storyboard */; };
+		0877DAC6278F4EC7008586D5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DAC5278F4EC7008586D5 /* AboutViewController.swift */; };
+		0877DAC8278F4EDA008586D5 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DAC7278F4EDA008586D5 /* FavoriteViewController.swift */; };
+		0877DACA278F4EE9008586D5 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DAC9278F4EE9008586D5 /* CountriesViewController.swift */; };
+		0877DACC278F4EFB008586D5 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DACB278F4EFB008586D5 /* CountryViewController.swift */; };
+		0877DACE278F4F05008586D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877DACD278F4F05008586D5 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0877DAA9278F42AC008586D5 /* Travel Guides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Guides.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0877DAAC278F42AC008586D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0877DAAE278F42AC008586D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0877DAB0278F42AC008586D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0877DAB3278F42AC008586D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0877DAB5278F42AE008586D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0877DAB8278F42AE008586D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0877DABA278F42AE008586D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0877DAC5278F4EC7008586D5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		0877DAC7278F4EDA008586D5 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		0877DAC9278F4EE9008586D5 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
+		0877DACB278F4EFB008586D5 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		0877DACD278F4F05008586D5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		0877DAAB278F42AC008586D5 /* Travel Guides */ = {
 			isa = PBXGroup;
 			children = (
-				0877DAAC278F42AC008586D5 /* AppDelegate.swift */,
-				0877DAAE278F42AC008586D5 /* SceneDelegate.swift */,
-				0877DAB0278F42AC008586D5 /* ViewController.swift */,
-				0877DAB2278F42AC008586D5 /* Main.storyboard */,
-				0877DAB5278F42AE008586D5 /* Assets.xcassets */,
-				0877DAB7278F42AE008586D5 /* LaunchScreen.storyboard */,
-				0877DABA278F42AE008586D5 /* Info.plist */,
+				0877DAC0278F4E3F008586D5 /* App */,
+				0877DAC3278F4E6B008586D5 /* Models */,
+				0877DAC4278F4E6F008586D5 /* ViewControllers */,
+				0877DAC1278F4E45008586D5 /* StoryBoards */,
+				0877DAC2278F4E50008586D5 /* Resources */,
 			);
 			path = "Travel Guides";
+			sourceTree = "<group>";
+		};
+		0877DAC0278F4E3F008586D5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0877DAAC278F42AC008586D5 /* AppDelegate.swift */,
+				0877DAAE278F42AC008586D5 /* SceneDelegate.swift */,
+				0877DABA278F42AE008586D5 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0877DAC1278F4E45008586D5 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0877DAB2278F42AC008586D5 /* Main.storyboard */,
+				0877DAB7278F42AE008586D5 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		0877DAC2278F4E50008586D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0877DAB5278F42AE008586D5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0877DAC3278F4E6B008586D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0877DAC4278F4E6F008586D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0877DAC5278F4EC7008586D5 /* AboutViewController.swift */,
+				0877DAC7278F4EDA008586D5 /* FavoriteViewController.swift */,
+				0877DAC9278F4EE9008586D5 /* CountriesViewController.swift */,
+				0877DACB278F4EFB008586D5 /* CountryViewController.swift */,
+				0877DACD278F4F05008586D5 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0877DAB1278F42AC008586D5 /* ViewController.swift in Sources */,
+				0877DACE278F4F05008586D5 /* LoginViewController.swift in Sources */,
+				0877DAC6278F4EC7008586D5 /* AboutViewController.swift in Sources */,
 				0877DAAD278F42AC008586D5 /* AppDelegate.swift in Sources */,
+				0877DAC8278F4EDA008586D5 /* FavoriteViewController.swift in Sources */,
+				0877DACC278F4EFB008586D5 /* CountryViewController.swift in Sources */,
+				0877DACA278F4EE9008586D5 /* CountriesViewController.swift in Sources */,
 				0877DAAF278F42AC008586D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HS4K74US2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Travel Guides/Info.plist";
+				INFOPLIST_FILE = "Travel Guides/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HS4K74US2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Travel Guides/Info.plist";
+				INFOPLIST_FILE = "Travel Guides/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
