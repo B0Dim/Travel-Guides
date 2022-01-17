@@ -12,7 +12,6 @@ struct TravelGuide {
     let todayWeather: Int
     let tomorrowWeather: Int
     let excursions: [Excursion]
-    var isFavorite = false
 }
 
 struct Excursion {
