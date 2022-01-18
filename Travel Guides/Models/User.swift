@@ -9,4 +9,6 @@ struct User {
     let name: String
     let password: String
     
+    var isRegistered = false
+    let favorite: Favorite
 }
