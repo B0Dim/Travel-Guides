@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="GlC-RZ-73f">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="GlC-RZ-73f" customClass="FavoriteViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GlC-RZ-73f" id="TdC-R2-R7W">
@@ -257,7 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="Yjp-My-nnR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="Yjp-My-nnR" customClass="CountriesViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yjp-My-nnR" id="OpX-WH-gkp">
@@ -270,15 +270,18 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQA-jx-d5A">
                                             <rect key="frame" x="36" y="11" width="83" height="22"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                            <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkG-TM-M5R">
                                             <rect key="frame" x="36" y="35" width="89" height="17"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                            <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="St9-k8-Eim">
+                                            <rect key="frame" x="197" y="85" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Vz0-b6-bOm" secondAttribute="trailing" constant="16" id="1ey-My-T7k"/>
@@ -286,7 +289,9 @@
                                         <constraint firstItem="uQA-jx-d5A" firstAttribute="leading" secondItem="OpX-WH-gkp" secondAttribute="leadingMargin" constant="16" id="ANA-Aq-zTc"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uQA-jx-d5A" secondAttribute="trailing" constant="20" symbolic="YES" id="Ezm-Qb-Z2g"/>
                                         <constraint firstItem="LkG-TM-M5R" firstAttribute="top" secondItem="uQA-jx-d5A" secondAttribute="bottom" constant="2" id="KzF-2K-A2W"/>
+                                        <constraint firstItem="St9-k8-Eim" firstAttribute="centerY" secondItem="OpX-WH-gkp" secondAttribute="centerY" id="M6P-FW-yIw"/>
                                         <constraint firstItem="Vz0-b6-bOm" firstAttribute="top" secondItem="OpX-WH-gkp" secondAttribute="top" id="Mm5-kC-Vf6"/>
+                                        <constraint firstItem="St9-k8-Eim" firstAttribute="centerX" secondItem="OpX-WH-gkp" secondAttribute="centerX" id="XHv-Qj-9rj"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LkG-TM-M5R" secondAttribute="trailing" constant="20" symbolic="YES" id="ZVg-dx-z5M"/>
                                         <constraint firstItem="LkG-TM-M5R" firstAttribute="leading" secondItem="uQA-jx-d5A" secondAttribute="leading" id="bcW-qF-FdI"/>
                                         <constraint firstItem="uQA-jx-d5A" firstAttribute="top" secondItem="OpX-WH-gkp" secondAttribute="topMargin" id="ioa-ou-fsY"/>
@@ -294,6 +299,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="St9-k8-Eim" id="UBa-DD-8Db"/>
+                                    <outlet property="cityNameLabel" destination="uQA-jx-d5A" id="r7e-F3-M8t"/>
+                                    <outlet property="countryImage" destination="Vz0-b6-bOm" id="Pq3-h7-nRd"/>
+                                    <outlet property="countryNameLabel" destination="LkG-TM-M5R" id="G68-ka-w7A"/>
                                     <segue destination="on7-pd-xCK" kind="presentation" identifier="showCityDetail1" id="bOz-W9-VwZ"/>
                                 </connections>
                             </tableViewCell>
@@ -563,8 +572,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q5B-Ga-UMT"/>
-        <segue reference="nZp-nH-cI8"/>
+        <segue reference="bOz-W9-VwZ"/>
+        <segue reference="LpU-ID-6ON"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_about" width="22" height="22"/>

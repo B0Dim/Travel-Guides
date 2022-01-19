@@ -34,3 +34,25 @@ final class Favorite {
         travelGuides.remove(at: position)
     }
 }
+
+extension TravelGuide {
+    
+    static func getCountries() -> [TravelGuide] {
+        
+        var result: [TravelGuide] = []
+        let dataManager = DataManager.shared
+        
+        for count in 0..<dataManager.countries.count {
+            result.append(TravelGuide(
+                countryName: dataManager.countries[count],
+                cityName: dataManager.cities[count],
+                image: dataManager.images[count],
+                todayWeather: dataManager.todayWeather[count],
+                tomorrowWeather: dataManager.tomorrowWeather[count],
+                excursions: dataManager.excursions[dataManager.countries[count]] ?? []
+            ))
+        }
+        
+        return result
+    }
+}
