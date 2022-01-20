@@ -35,10 +35,13 @@ class CountriesViewController: UITableViewController {
     }
 
     // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destination.
-//        // Pass the selected object to the new view controller.
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let cityVC = segue.destination as? CityViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let cell = tableView.cellForRow(at: indexPath) as? CountriesViewCell else { return }
+        cityVC.cityGuide = countries[indexPath.row]
+        cityVC.imageCity = cell.countryImage.image
+    }
     
 
 }

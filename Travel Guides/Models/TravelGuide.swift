@@ -11,6 +11,7 @@ struct TravelGuide {
     let image: String
     let todayWeather: Int
     let tomorrowWeather: Int
+    let aboutText: String
     let excursions: [Excursion]
 }
 
@@ -49,6 +50,7 @@ extension TravelGuide {
                 image: dataManager.images[count],
                 todayWeather: dataManager.todayWeather[count],
                 tomorrowWeather: dataManager.tomorrowWeather[count],
+                aboutText: dataManager.aboutText[count],
                 excursions: dataManager.excursions[dataManager.countries[count]] ?? []
             ))
         }
