@@ -11,6 +11,7 @@ struct TravelGuide {
     let image: String
     let todayWeather: Int
     let tomorrowWeather: Int
+    let aboutText: String
     let excursions: [Excursion]
 }
 
@@ -32,5 +33,28 @@ final class Favorite {
     
     func removeFavoriteGuide(from position: Int) {
         travelGuides.remove(at: position)
+    }
+}
+
+extension TravelGuide {
+    
+    static func getCountries() -> [TravelGuide] {
+        
+        var result: [TravelGuide] = []
+        let dataManager = DataManager.shared
+        
+        for count in 0..<dataManager.countries.count {
+            result.append(TravelGuide(
+                countryName: dataManager.countries[count],
+                cityName: dataManager.cities[count],
+                image: dataManager.images[count],
+                todayWeather: dataManager.todayWeather[count],
+                tomorrowWeather: dataManager.tomorrowWeather[count],
+                aboutText: dataManager.aboutText[count],
+                excursions: dataManager.excursions[dataManager.countries[count]] ?? []
+            ))
+        }
+        
+        return result
     }
 }

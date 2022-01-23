@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="GlC-RZ-73f">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="GlC-RZ-73f" customClass="FavoriteViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GlC-RZ-73f" id="TdC-R2-R7W">
@@ -139,7 +139,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="on7-pd-xCK" kind="presentation" identifier="showCityDetail2" id="q5B-Ga-UMT"/>
+                                    <segue destination="on7-pd-xCK" kind="show" identifier="showCityDetail2" id="q5B-Ga-UMT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -257,7 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="Yjp-My-nnR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellCountry" rowHeight="190" id="Yjp-My-nnR" customClass="CountriesViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yjp-My-nnR" id="OpX-WH-gkp">
@@ -270,15 +270,18 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQA-jx-d5A">
                                             <rect key="frame" x="36" y="11" width="83" height="22"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                            <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkG-TM-M5R">
                                             <rect key="frame" x="36" y="35" width="89" height="17"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                            <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="St9-k8-Eim">
+                                            <rect key="frame" x="197" y="85" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Vz0-b6-bOm" secondAttribute="trailing" constant="16" id="1ey-My-T7k"/>
@@ -286,7 +289,9 @@
                                         <constraint firstItem="uQA-jx-d5A" firstAttribute="leading" secondItem="OpX-WH-gkp" secondAttribute="leadingMargin" constant="16" id="ANA-Aq-zTc"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uQA-jx-d5A" secondAttribute="trailing" constant="20" symbolic="YES" id="Ezm-Qb-Z2g"/>
                                         <constraint firstItem="LkG-TM-M5R" firstAttribute="top" secondItem="uQA-jx-d5A" secondAttribute="bottom" constant="2" id="KzF-2K-A2W"/>
+                                        <constraint firstItem="St9-k8-Eim" firstAttribute="centerY" secondItem="OpX-WH-gkp" secondAttribute="centerY" id="M6P-FW-yIw"/>
                                         <constraint firstItem="Vz0-b6-bOm" firstAttribute="top" secondItem="OpX-WH-gkp" secondAttribute="top" id="Mm5-kC-Vf6"/>
+                                        <constraint firstItem="St9-k8-Eim" firstAttribute="centerX" secondItem="OpX-WH-gkp" secondAttribute="centerX" id="XHv-Qj-9rj"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LkG-TM-M5R" secondAttribute="trailing" constant="20" symbolic="YES" id="ZVg-dx-z5M"/>
                                         <constraint firstItem="LkG-TM-M5R" firstAttribute="leading" secondItem="uQA-jx-d5A" secondAttribute="leading" id="bcW-qF-FdI"/>
                                         <constraint firstItem="uQA-jx-d5A" firstAttribute="top" secondItem="OpX-WH-gkp" secondAttribute="topMargin" id="ioa-ou-fsY"/>
@@ -294,7 +299,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="on7-pd-xCK" kind="presentation" identifier="showCityDetail1" id="bOz-W9-VwZ"/>
+                                    <outlet property="activityIndicator" destination="St9-k8-Eim" id="UBa-DD-8Db"/>
+                                    <outlet property="cityNameLabel" destination="uQA-jx-d5A" id="r7e-F3-M8t"/>
+                                    <outlet property="countryImage" destination="Vz0-b6-bOm" id="Pq3-h7-nRd"/>
+                                    <outlet property="countryNameLabel" destination="LkG-TM-M5R" id="G68-ka-w7A"/>
+                                    <segue destination="on7-pd-xCK" kind="show" identifier="showCityDetail1" id="bOz-W9-VwZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -309,33 +318,33 @@
             </objects>
             <point key="canvasLocation" x="1921.7391304347827" y="-318.08035714285711"/>
         </scene>
-        <!--Country View Controller-->
+        <!--City View Controller-->
         <scene sceneID="KuQ-dt-uQM">
             <objects>
-                <viewController id="on7-pd-xCK" customClass="CountryViewController" customModule="Travel_Guides" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="on7-pd-xCK" customClass="CityViewController" customModule="Travel_Guides" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S3x-My-PV4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NcT-g1-nA3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="85" id="NLN-0X-TQd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TitleCell" rowHeight="85" id="NLN-0X-TQd" customClass="TitleCityViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NLN-0X-TQd" id="HSj-eP-UY6">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleCountry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-Uf-vcg">
-                                                    <rect key="frame" x="20" y="11" width="105" height="21.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleCity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-Uf-vcg">
+                                                    <rect key="frame" x="20" y="11" width="70.5" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="abH-Go-I4T">
-                                                    <rect key="frame" x="20" y="34.5" width="306.5" height="36"/>
+                                                    <rect key="frame" x="20" y="33" width="218" height="36"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FeF-Vq-h9i">
                                                             <rect key="frame" x="0.0" y="0.0" width="129.5" height="36"/>
@@ -348,24 +357,24 @@
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rr-R0-6g4">
                                                                     <rect key="frame" x="0.0" y="18" width="129.5" height="18"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="76b-FZ-kRB">
-                                                            <rect key="frame" x="149.5" y="0.0" width="157" height="36"/>
+                                                            <rect key="frame" x="149.5" y="0.0" width="68.5" height="36"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs3-Ha-L1r">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs3-Ha-L1r">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="68.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-LE-jfC">
-                                                                    <rect key="frame" x="0.0" y="18" width="157" height="18"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <rect key="frame" x="0.0" y="18" width="68.5" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" red="0.93177419900000003" green="0.93196147679999997" blue="0.93544226880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -384,11 +393,13 @@
                                                         <backgroundConfiguration key="background" image="icon_favorite_red"/>
                                                     </buttonConfiguration>
                                                     <connections>
+                                                        <action selector="favoriteClicked:" destination="NLN-0X-TQd" eventType="touchUpInside" id="GTd-cu-QlL"/>
                                                         <segue destination="Kgv-Kl-s3Q" kind="presentation" modalPresentationStyle="fullScreen" id="nZp-nH-cI8"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="abH-Go-I4T" secondAttribute="bottom" constant="5" id="EZc-1R-1PW"/>
                                                 <constraint firstItem="abH-Go-I4T" firstAttribute="leading" secondItem="BgO-Uf-vcg" secondAttribute="leading" id="J5S-rB-Tdr"/>
                                                 <constraint firstItem="BgO-Uf-vcg" firstAttribute="leading" secondItem="HSj-eP-UY6" secondAttribute="leadingMargin" id="Og7-aL-SWZ"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BgO-Uf-vcg" secondAttribute="trailing" constant="20" symbolic="YES" id="b9x-jE-2Pc"/>
@@ -399,16 +410,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.3353204709" green="0.3294184" blue="0.82914370569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="favoriteButton" destination="fT6-Bx-4ba" id="Tn7-Pe-3ZX"/>
+                                            <outlet property="temperatureTodayLabel" destination="9Rr-R0-6g4" id="6Zj-NP-Tf5"/>
+                                            <outlet property="temperatureTomorrowLabel" destination="Hd3-LE-jfC" id="Ij7-DZ-sfr"/>
+                                            <outlet property="titleCityLabel" destination="BgO-Uf-vcg" id="RUt-s8-dGz"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutCell" rowHeight="44" id="U16-dg-0iH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AboutCell" rowHeight="44" id="U16-dg-0iH" customClass="AboutCityViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="129.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U16-dg-0iH" id="A5J-Pd-eMc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About country text many lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-EU-NcA">
-                                                    <rect key="frame" x="16" y="5" width="226.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About country text many lines" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-EU-NcA">
+                                                    <rect key="frame" x="16" y="5" width="382" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -417,10 +434,16 @@
                                             <constraints>
                                                 <constraint firstItem="bn1-EU-NcA" firstAttribute="top" secondItem="A5J-Pd-eMc" secondAttribute="top" constant="5" id="4NK-Dg-BMz"/>
                                                 <constraint firstItem="bn1-EU-NcA" firstAttribute="leading" secondItem="A5J-Pd-eMc" secondAttribute="leading" constant="16" id="6Kl-o4-gGv"/>
+                                                <constraint firstAttribute="trailing" secondItem="bn1-EU-NcA" secondAttribute="trailing" constant="16" id="iOm-ZO-gmz"/>
+                                                <constraint firstItem="bn1-EU-NcA" firstAttribute="top" secondItem="A5J-Pd-eMc" secondAttribute="top" constant="5" id="kyr-P1-8yk"/>
+                                                <constraint firstAttribute="bottom" secondItem="bn1-EU-NcA" secondAttribute="bottom" constant="5" id="v3M-gS-b6c"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="aboutCityLabel" destination="bn1-EU-NcA" id="XKq-yJ-PPJ"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExcursionsCell" rowHeight="64" id="cdn-VM-YIF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExcursionsCell" rowHeight="64" id="cdn-VM-YIF" customClass="ExcursionsViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="173.5" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdn-VM-YIF" id="IAb-aW-t2T">
@@ -428,23 +451,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bjU-wQ-M8h">
-                                                    <rect key="frame" x="16" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="16" y="10" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="bgr-aO-YOG"/>
-                                                        <constraint firstAttribute="width" constant="40" id="iPb-Vf-J1y"/>
+                                                        <constraint firstAttribute="height" constant="60" id="bgr-aO-YOG"/>
+                                                        <constraint firstAttribute="width" constant="60" id="iPb-Vf-J1y"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rlo-XY-uBI">
-                                                    <rect key="frame" x="76" y="11" width="302" height="39.5"/>
+                                                    <rect key="frame" x="96" y="11" width="282" height="43"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Excursion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJy-ry-auo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="21.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title Excursion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJy-ry-auo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="25"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Excursion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siL-eU-gap">
-                                                            <rect key="frame" x="0.0" y="21.5" width="302" height="18"/>
+                                                            <rect key="frame" x="0.0" y="25" width="282" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -457,11 +480,17 @@
                                                 <constraint firstItem="rlo-XY-uBI" firstAttribute="top" secondItem="IAb-aW-t2T" secondAttribute="topMargin" id="Al3-k9-beh"/>
                                                 <constraint firstItem="bjU-wQ-M8h" firstAttribute="leading" secondItem="IAb-aW-t2T" secondAttribute="leading" constant="16" id="Kn5-bs-RjL"/>
                                                 <constraint firstItem="rlo-XY-uBI" firstAttribute="leading" secondItem="bjU-wQ-M8h" secondAttribute="trailing" constant="20" id="MEv-DC-daQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="rlo-XY-uBI" secondAttribute="bottom" constant="10" id="arn-dr-drh"/>
                                                 <constraint firstItem="bjU-wQ-M8h" firstAttribute="top" secondItem="IAb-aW-t2T" secondAttribute="top" constant="10" id="fg1-Xi-NfB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="aboutExcursionLabel" destination="siL-eU-gap" id="HVm-sX-Z2t"/>
+                                            <outlet property="excursionImage" destination="bjU-wQ-M8h" id="GH1-Pq-qh8"/>
+                                            <outlet property="titleExcursionLabel" destination="FJy-ry-auo" id="jFO-GV-AKc"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SomeImageCell" rowHeight="146" id="gTG-o0-g1X">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="146" id="gTG-o0-g1X" customClass="ImageCityViewCell" customModule="Travel_Guides" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="237.5" width="414" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gTG-o0-g1X" id="GfQ-I5-LpD">
@@ -482,8 +511,15 @@
                                                 <constraint firstAttribute="trailing" secondItem="I2J-Wb-1Q9" secondAttribute="trailing" id="uuo-2z-WFb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityImage" destination="I2J-Wb-1Q9" id="Zwe-h1-6hD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="on7-pd-xCK" id="diD-MG-1EQ"/>
+                                    <outlet property="delegate" destination="on7-pd-xCK" id="Gsr-na-aOi"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="26B-t8-e7X"/>
@@ -495,6 +531,10 @@
                             <constraint firstItem="NcT-g1-nA3" firstAttribute="leading" secondItem="26B-t8-e7X" secondAttribute="leading" id="iS3-yo-gvU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TaB-Ki-axh"/>
+                    <connections>
+                        <outlet property="tableView" destination="NcT-g1-nA3" id="Vc1-Zi-Jqp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PL-m5-wHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -563,7 +603,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q5B-Ga-UMT"/>
+        <segue reference="bOz-W9-VwZ"/>
         <segue reference="nZp-nH-cI8"/>
     </inferredMetricsTieBreakers>
     <resources>
