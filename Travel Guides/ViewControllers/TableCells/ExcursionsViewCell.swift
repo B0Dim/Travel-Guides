@@ -25,7 +25,7 @@ class ExcursionsViewCell: UITableViewCell {
         }
     }
     
-    internal func fetchImage(url: String) {
+    func fetchImage(url: String) {
         imageUrl = URL(string: url)
         let queue = DispatchQueue.global(qos: .utility)
         queue.async {

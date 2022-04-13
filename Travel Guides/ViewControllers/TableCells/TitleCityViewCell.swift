@@ -15,7 +15,7 @@ class TitleCityViewCell: UITableViewCell {
     @IBOutlet weak var favoriteButton: UIButton!
 
     @IBAction func favoriteClicked(_ sender: UIButton) {
-        //add or remove favorite
+
     }
     
 }

@@ -11,8 +11,8 @@ class CityViewController: UIViewController {
        
     @IBOutlet weak var tableView: UITableView!
     
-    internal var cityGuide: TravelGuide!
-    internal var imageCity: UIImage? = nil
+    var cityGuide: TravelGuide!
+    var imageCity: UIImage? = nil
     private let countRowsDefault = 3
     
     override func viewDidLoad() {
@@ -20,24 +20,13 @@ class CityViewController: UIViewController {
 
         tableView.separatorColor = .white
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 //MARK: TableView Data Source
 extension CityViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cityGuide.excursions.count + countRowsDefault
+        cityGuide.excursions.count + countRowsDefault
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +59,7 @@ extension CityViewController: UITableViewDelegate, UITableViewDataSource {
     }
   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        UITableView.automaticDimension
     }
 
 }

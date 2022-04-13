@@ -29,7 +29,7 @@ class CountriesViewCell: UITableViewCell {
         }
     }
     
-    internal func fetchImage(url: String) {
+    func fetchImage(url: String) {
         imageUrl = URL(string: url)
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
